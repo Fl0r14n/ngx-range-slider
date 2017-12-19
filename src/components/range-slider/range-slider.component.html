@@ -1,0 +1,24 @@
+<div class="range-slider">
+  <span>{{min}}</span>
+  <span class="info" #minOut>{{minValue}}</span>
+  <span class="info" #maxOut>{{maxValue}}</span>
+  <input *ngIf="!list" class="original" type="range"
+         name="{{name}}" min="{{min}}" max="{{max}}" step="{{step}}" [(ngModel)]="minValue"
+         (click)="$event.stopPropagation(); submit()" (input)="$event.stopPropagation(); setLow()">
+  <input *ngIf="!list" #ghost class="ghost" type="range"
+         name="{{name}}" min="{{min}}" max="{{max}}" step="{{step}}" [(ngModel)]="maxValue"
+         (click)="$event.stopPropagation(); submit()" (input)="$event.stopPropagation(); setHigh()">
+
+  <input *ngIf="list" class="original" type="range"
+         name="{{name}}" min="{{min}}" max="{{max}}" step="{{step}}" [(ngModel)]="minValue"
+         [attr.list]="name ? name : ''+'_datalist'"
+         (click)="$event.stopPropagation(); submit()" (input)="$event.stopPropagation(); setLow()">
+  <input *ngIf="list" #ghost class="ghost" type="range"
+         name="{{name}}" min="{{min}}" max="{{max}}" step="{{step}}" [(ngModel)]="maxValue"
+         [attr.list]="name ? name : ''+'_datalist'"
+         (click)="$event.stopPropagation(); submit()" (input)="$event.stopPropagation(); setHigh()">
+  <span>{{max}}</span>
+  <datalist *ngIf="list" id="{{name}}_datalist">
+    <option *ngFor="let value of list" value="{{value}}" [label]="value"></option>
+  </datalist>
+</div>
