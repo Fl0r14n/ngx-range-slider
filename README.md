@@ -14,6 +14,8 @@ A html5 range slider based on input[type="range"]
 npm install ngx-range-slider --save
 ```
 
+Import ```RangeSliderModule``` in your angular app
+
 ## App Requirements
 * none
 
