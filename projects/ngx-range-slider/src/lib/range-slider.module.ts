@@ -3,14 +3,14 @@ import {NgModule} from '@angular/core';
 import {FormsModule} from '@angular/forms';
 import {RangeSliderComponent} from './components/range-slider/range-slider.component';
 
+const declarations = [
+  RangeSliderComponent
+]
+
 @NgModule({
   imports: [CommonModule, FormsModule],
-  declarations: [
-    RangeSliderComponent
-  ],
-  exports: [
-    RangeSliderComponent
-  ]
+  declarations,
+  exports: declarations
 })
 export class RangeSliderModule {
 }

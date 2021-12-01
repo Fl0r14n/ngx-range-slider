@@ -1,0 +1,25 @@
+{
+  "name": "ngx-range-slider",
+  "version": "1.0.0",
+  "description": "Angular range slider based in input type range",
+  "keywords": [
+    "angular",
+    "slider",
+    "range",
+    "ngx"
+  ],
+  "author": "Fl0r14n <florian.chis@gmail.com>",
+  "homepage": "https://github.com/Fl0r14n/ngx-range-slider/",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:Fl0r14n/ngx-range-slider.git"
+  },
+  "license": "MIT",
+  "peerDependencies": {
+    "@angular/common": "*",
+    "@angular/core": "*"
+  },
+  "dependencies": {
+    "tslib": "^2.0.0"
+  }
+}

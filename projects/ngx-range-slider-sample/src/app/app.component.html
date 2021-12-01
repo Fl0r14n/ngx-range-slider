@@ -1,0 +1,15 @@
+<range-slider [min]="10"
+              [max]="90"
+              [(minValue)]="minValue1"
+              [(maxValue)]="maxValue1"
+              [step]="10">
+  <div>Selected: {{minValue1}}:{{maxValue1}}</div>
+</range-slider>
+<range-slider name="range"
+              [min]="20"
+              [max]="77"
+              [list]="[20,32,56,77]"
+              [minValue]="30"
+              [maxValue]="60"
+              (rangeChange)="rangeChange($event)"></range-slider>
+<div>Selected: {{minValue2}}:{{maxValue2}}</div>
